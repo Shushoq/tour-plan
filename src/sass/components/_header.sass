@@ -1,0 +1,83 @@
+.header
+  padding: 40px
+  &__top
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &__logo
+    margin-right: 108px
+  &__search
+    margin-right: auto
+.logo
+  &__img
+    width: 177px
+    height: 24px
+.search
+  position: relative
+  width: 350px
+  overflow: hidden
+  border-radius: 6px
+  &__field
+    position: relative
+    width: 100%
+    padding: 11px 75px 11px 23px
+    background: #F5FAFE
+    border: none
+    transition: opacity 0.2s
+    &:focus + .search__placeholder
+      opacity: 0
+      transition: opacity 0.2s
+  &__placeholder
+    position: absolute
+    left: 23px
+    top: 50%
+    transform: translateY(-50%)
+    font-size: 12px
+    font-weight: 400
+    color: $primary-color
+    opacity: 1
+    transition: opacity 0.2s
+    &::after
+      content: ''
+      position: absolute
+      right: -5px
+      top: 0
+      background-color: $primary-color
+      height: 100%
+      width: 1px
+      transition: opacity 0.2s
+      animation: 0.7s infinite place
+  &__button
+    position: absolute
+    right: 0
+    top: 50%
+    transform: translateY(-50%)
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 100%
+    width: 65px
+    background: $accent-color
+  &__img
+    width: 16px
+    height: 16px
+    fill: #fff
+.user
+  display: flex
+  align-items: center
+  &__avatar
+    margin-right: 18px
+    width: 40px
+    height: 40px
+    border-radius: 50%
+    object-fit: cover
+  &__name
+    font-size: 14px
+    font-weight: 400
+    color: $primary-color
+
+@keyframes place
+  0%
+    opacity: 1
+  100%
+    opacity: 0
