@@ -1,0 +1,12 @@
+.breadcrumb
+  padding: 19px 0
+  &__list
+    display: flex
+    align-items: center
+    font-size: 10px
+    color: $primary-color
+  &__item
+    &:not(:last-child)
+      &:after
+        content: "/"
+        margin-right: 4px
