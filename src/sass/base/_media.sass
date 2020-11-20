@@ -13,13 +13,15 @@
       margin: 0 auto
       width: 340px
   .nav
-    padding: 25px 0
+    padding: 21px 0
+    &__list
+      justify-content: space-around
     &__link
       font-size: 12px
   .logo
     &__img
       width: 160px
-@media (max-width: 768px)
+@media (max-width: 767px)
   .container
     max-width: 540px
   .nav
@@ -44,11 +46,35 @@
   .logo
     &__img
       width: 132px
+  .hotel
+    &__inner
+      justify-content: space-between
+    &__text
+      width: 100%
+    &__stars
+      flex-basis: auto
+    &__title
+      flex-basis: 100%
+      margin-top: 10px
+      margin-right: 0
+    &__offer
+      order: -1
+    &__rating
+      display: none
 @media (max-width: 576px)
   .container
     padding: 0
-    width: 90%
+    width: 87%
 @media (max-width: 480px)
+  .header
+    padding: 21px 0 22px
   .logo
     &__img
       width: 99px
+  .breadcrumb
+    padding: 20px 0
+  .hotel
+    padding-top: 3px
+    &__title
+      font-size: 24px
+
