@@ -5,6 +5,7 @@
     display: flex
     align-items: center
     justify-content: space-between
+    margin-bottom: 18px
   &__text
   &__inner
     display: flex
@@ -34,12 +35,54 @@
     font-size: 12px
     line-height: 15px
     color: $primary-color
+  &__rating
+    margin-top: 5px
+  &__slider
+    position: relative
+    overflow: hidden
+    width: 728px
+    height: 450px
+    border-radius: 8px
+    margin-left: 0
+    &-btn
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      width: 30px
+      height: 30px
+      background-position: center
+      background-size: 10px
+      background-repeat: no-repeat
+      z-index: 99
+      &--next
+        right: 16px
+        background-image: url('../img/btn-next.svg')
+      &--prev
+        left: 18px
+        background-image: url('../img/btn-prev.svg')
+  &__slide
+    position: relative
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+    &:after
+      content: ''
+      position: absolute
+      left: 0
+      right: 0
+      top: 0
+      bottom: 0
+      width: 100%
+      height: 100%
+      background: linear-gradient(180deg, rgba(0, 122, 223, 0.48) 0%, rgba(255, 255, 255, 0.128) 100%)
+      z-index: 10
+
 .rating
   display: flex
   flex-direction: column
   align-items: center
   justify-content: center
-  margin-top: 5px
   max-width: 65px
   min-height: 45px
   padding: 7px

@@ -2,14 +2,13 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Best Tour Plan</title>
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/style.min.css" />
 </head>
 
 <body>
-
   <header class="header">
     <div class="container">
       <div class="header__top">
@@ -19,7 +18,7 @@
           </svg>
         </a>
         <form class="search header__search" action="#">
-          <input class="search__field" id="search" type="search" placeholder="">
+          <input class="search__field" id="search" type="search" placeholder="" />
           <label class="search__placeholder" for="search">Search Location</label>
           <button class="search__button">
             <svg class="search__img">
@@ -28,7 +27,7 @@
           </button>
         </form>
         <a class="user header__user" href="#">
-          <img class="user__avatar" src="img/user-avatar.jpg" alt="user avatar">
+          <img class="user__avatar" src="img/user-avatar.jpg" alt="user avatar" />
           <span class="user__name">Nathan</span>
         </a>
         <button class="header__burger">
@@ -45,9 +44,15 @@
       <ul class="nav__list">
         <li class="nav__item"><a href="#" class="nav__link">All Deals</a></li>
         <li class="nav__item"><a href="#" class="nav__link">Hotels</a></li>
-        <li class="nav__item"><a href="#" class="nav__link">Activities</a></li>
-        <li class="nav__item"><a href="#" class="nav__link">Hotel Day Packages</a></li>
-        <li class="nav__item"><a href="#" class="nav__link">Restaurants</a></li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">Activities</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">Hotel Day Packages</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">Restaurants</a>
+        </li>
         <li class="nav__item"><a href="#" class="nav__link">Events</a></li>
         <li class="nav__item"><a href="#" class="nav__link">Rodrigues</a></li>
       </ul>
@@ -63,9 +68,7 @@
         <li class="breadcrumb__item">
           <a href="#" class="breadcrumb__link">Flash offers</a>
         </li>
-        <li class="breadcrumb__item">
-          Grand Hilton Hotel
-        </li>
+        <li class="breadcrumb__item">Grand Hilton Hotel</li>
       </ul>
     </div>
   </nav>
@@ -76,20 +79,35 @@
         <div class="hotel__text">
           <div class="hotel__inner">
             <div class="hotel__stars">
-              <img class="hotel__stars-img" src="img/Star.svg" alt="star">
-              <img class="hotel__stars-img" src="img/Star.svg" alt="star">
-              <img class="hotel__stars-img" src="img/Star.svg" alt="star">
-              <img class="hotel__stars-img" src="img/Star.svg" alt="star">
-              <img class="hotel__stars-img" src="img/Star.svg" alt="star">
+              <img class="hotel__stars-img" src="img/Star.svg" alt="star" />
+              <img class="hotel__stars-img" src="img/Star.svg" alt="star" />
+              <img class="hotel__stars-img" src="img/Star.svg" alt="star" />
+              <img class="hotel__stars-img" src="img/Star.svg" alt="star" />
+              <img class="hotel__stars-img" src="img/Star.svg" alt="star" />
             </div>
             <h2 class="hotel__title">Grand hilton hotel</h2>
             <span class="hotel__offer">Flash Offer</span>
           </div>
-          <p class="hotel__descr">Half-Board/ All Inclusive + Complimentary Activities + Child Stays Free</p>
+          <p class="hotel__descr">
+            Half-Board/ All Inclusive + Complimentary Activities + Child Stays
+            Free
+          </p>
         </div>
         <div class="rating hotel__rating">
           <span class="rating__name">User Rattings</span>
           <span class="rating__counter">4.5/<small>5</small></span>
+        </div>
+      </div>
+      <div class="hotel__grid">
+        <div class="hotel__slider swiper-container">
+          <div class="swiper-wrapper">
+            <div class="hotel__slide swiper-slide"><img src="img/hotel-slider-1.jpg" alt="House"></div>
+            <div class="hotel__slide swiper-slide"><img src="img/hotel-slider-2.jpg" alt="House"></div>
+            <div class="hotel__slide swiper-slide"><img src="img/hotel-slider-3.jpg" alt="House"></div>
+            <div class="hotel__slide swiper-slide"><img src="img/hotel-slider-4.jpg" alt="House"></div>
+          </div>
+          <button class="hotel__slider-btn hotel__slider-btn--next"></button>
+          <button class="hotel__slider-btn hotel__slider-btn--prev"></button>
         </div>
       </div>
     </div>
