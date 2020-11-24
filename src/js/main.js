@@ -9,14 +9,12 @@
 // closeElem.addEventListener('click', () => {
 //   menu.classList.remove('menu_active');
 // })
-import Swiper, {
-  Navigation,
-  Pagination
-} from "swiper";
-Swiper.use([Navigation, Pagination]);
+import Swiper from "swiper";
+
+
 const swiper = new Swiper(".hotel__slider", {
   loop: true,
-  speed: 500,
+  speed: 300,
   effect: 'fade',
   fade: {
     crossFade: true
