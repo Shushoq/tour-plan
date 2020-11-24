@@ -9,7 +9,7 @@
   "author": "Shushoq",
   "license": "ISC",
   "dependencies": {
-    "swiper": "^6.0.0"
+    "swiper": "^5.4.5"
   },
   "devDependencies": {
     "@babel/core": "^7.10.5",
