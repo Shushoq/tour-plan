@@ -21,6 +21,7 @@
     &__img
       width: 132px
   .hotel
+    padding-bottom: 60px
     &__inner
       margin-bottom: 0
     &__rating
@@ -42,6 +43,29 @@
     &__map
       width: 340px
       height: 210px
+  .newsletter
+    padding: 93px 0 95px
+    &__text
+      margin-right: 109px
+    &__subtitle
+      margin-bottom: 4px
+  .reviews
+    &__item
+      width: 579px
+      &::before,&::after
+        display: none
+    &__title
+      margin-bottom: 51px
+      font-size: 30px
+    &__text
+      max-width: 455px
+    &__slider
+      &-btn
+        top: 50%
+        &--next
+          right: 0px
+        &--prev
+          left: 1px
 @media (max-width: 767px)
   .container
     max-width: 540px
@@ -68,6 +92,7 @@
     &__img
       width: 132px
   .hotel
+    padding-bottom: 40px
     &__inner
       justify-content: space-between
     &__text
@@ -93,10 +118,49 @@
       width: 100%
     &__map
       width: 100%
+  .newsletter
+    &__container
+      flex-direction: column
+      align-items: flex-start
+    &__text
+      margin-right: 0
+      margin-bottom: 37px
+  .reviews
+    &__item
+      width: 100%
+    &__text
+      width: 100%
+    &__slider
+      &-btn
+        top: 45px
+        &--next
+          right: 20%
+        &--prev
+          left: 20%
+  .subscribe
+    width: 100%
 @media (max-width: 576px)
   .container
     padding: 0
     width: 87%
+  .newsletter
+    padding: 77px 0 83px
+    &__text
+      margin-bottom: 39px
+    &__subtitle
+      font-size: 20px
+      margin-bottom: 8px
+    &__title
+      font-size: 30px
+  .reviews
+    &__text
+      width: 78%
+      text-align: left
+    &__item
+      padding-bottom: 35px
+      width: 100%
+    &__title
+      font-size: 25px
 @media (max-width: 480px)
   .header
     padding: 21px 0 22px
@@ -119,3 +183,19 @@
       height: 210px
     &__map
       height: 173px
+  .reviews
+    padding-top: 40px
+    &__title
+      font-size: 18px
+      line-height: 23px
+      width: 230px
+      margin-left: auto
+      margin-right: auto
+      margin-bottom: 42px
+    &__slider
+      &-btn
+        top: 45px
+        &--next
+          right: 13%
+        &--prev
+          left: 12%

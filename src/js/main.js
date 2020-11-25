@@ -12,7 +12,7 @@
 import Swiper from "swiper";
 
 
-const swiper = new Swiper(".hotel__slider", {
+const hotelSwiper = new Swiper(".hotel__slider", {
   loop: true,
   speed: 300,
   effect: 'fade',
@@ -27,5 +27,14 @@ const swiper = new Swiper(".hotel__slider", {
     enabled: true,
     onlyInViewport: true,
     pageUpDown: true,
+  },
+});
+
+const reviewsSwiper = new Swiper(".reviews__slider", {
+  loop: true,
+  speed: 300,
+  navigation: {
+    nextEl: ".reviews__slider-btn--next",
+    prevEl: ".reviews__slider-btn--prev",
   },
 });

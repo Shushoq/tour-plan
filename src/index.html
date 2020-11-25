@@ -99,7 +99,7 @@
         </div>
       </div>
       <div class="hotel__grid">
-        <div class="hotel__slider swiper-container">
+        <div class="hotel__slider">
           <div class="swiper-wrapper">
             <div class="hotel__slide swiper-slide"><img src="img/hotel-slider-1.jpg" alt="House"></div>
             <div class="hotel__slide swiper-slide"><img src="img/hotel-slider-2.jpg" alt="House"></div>
@@ -126,7 +126,7 @@
             </div>
             <button class="hotel__button">View Other Options</button>
           </div>
-          <div class="hotel__map">
+          <div id="map" class="hotel__map">
             <iframe class="hotel__map-frame"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7500.746811551891!2d-122.42303962194119!3d37.774205101819256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808580a196ede719%3A0x2fb5607634331f2f!2zSGF5ZXMgVmFsbGV5LCDQodCw0L0t0KTRgNCw0L3RhtC40YHQutC-LCDQmtCw0LvQuNGE0L7RgNC90LjRjyA5NDEwMiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1606217945560!5m2!1sru!2sru"
               style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
@@ -135,6 +135,95 @@
       </div>
     </div>
   </section>
+
+  <section class="newsletter" data-rellax-speed="7">
+    <div class="container newsletter__container">
+      <div class="newsletter__text">
+        <span class="newsletter__subtitle">subscribe to our</span>
+        <h2 class="newsletter__title">Newsletter</h2>
+      </div>
+      <form class="subscribe newsletter__subscribe" action="#">
+        <input class="subscribe__field" name="email" id="text" type="text" placeholder="Your email address">
+        <button class="subscribe__button">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="reviews">
+    <div class="container">
+      <h2 class="reviews__title">What people think about us</h2>
+      <div class="reviews__slider swiper-container">
+        <div class="swiper-wrapper">
+          <div class="reviews__slide swiper-slide">
+            <div class="reviews__item">
+              <div class="reviews__profile">
+                <img class="reviews__avatar" src="img/reviews-avatar-1.jpg" alt="avatar: Megan Fox">
+                <h3 class="reviews__username">Megan Fox</h3>
+                <time class="reviews__date" datetime="2019-11-18">Stayed 18 Nov, 2019</time>
+                <div class="reviews__stars">
+                  <img class="reviews__stars-img" src="img/Star.svg" alt="star" />
+                  <img class="reviews__stars-img" src="img/Star.svg" alt="star" />
+                  <img class="reviews__stars-img" src="img/Star.svg" alt="star" />
+                  <img class="reviews__stars-img" src="img/Star.svg" alt="star" />
+                  <img class="reviews__stars-img" src="img/Star.svg" alt="star" />
+                </div>
+              </div>
+              <p class="reviews__text">It was very nice hotel with cleanliness. Staff behavior was good and polite.
+                They welcome us very well. Issue was only that Lift was not in working and we were allotted to 3rd floor
+                and amenities articles were in corner of gallery which were giving bad feeling. Breakfast was good and
+                support of the staff was also very nice. Location is not good as per atmosphere, it is very nearby most
+                of the popular places but self location in a narrow street is not good. Overall it was a good experience
+                and could recommend. </p>
+            </div>
+          </div>
+          <div class="reviews__slide swiper-slide">
+            <div class="reviews__item">
+              <div class="reviews__profile">
+                <img class="reviews__avatar" src="img/reviews-avatar-2.jpg" alt="avatar: Jeffri Larsen">
+                <h3 class="reviews__username">Jeffri Larsen</h3>
+                <time class="reviews__date" datetime="2020-11-06">Stayed 18 Jun, 2020</time>
+                <div class="reviews__stars">
+                  <img class="reviews__stars-img" src="img/Star.svg" alt="star" />
+                  <img class="reviews__stars-img" src="img/Star.svg" alt="star" />
+                  <img class="reviews__stars-img" src="img/Star.svg" alt="star" />
+                  <img class="reviews__stars-img" src="img/Star.svg" alt="star" />
+                  <img class="reviews__stars-img" src="img/Star.svg" alt="star" />
+                </div>
+              </div>
+              <p class="reviews__text">This hotel has the best facilities for everyone. Good location and it’s got a
+                water theme park which can be enjoyable for any type of vacation. I would recommend this to all. You can
+                also just take your family the the day out on water theme park if you don’t want to stay at this hotel.
+              </p>
+            </div>
+          </div>
+          <div class="reviews__slide swiper-slide">
+            <div class="reviews__item">
+              <div class="reviews__profile">
+                <img class="reviews__avatar" src="img/reviews-avatar-3.jpg" alt="avatar: Monica Gastambite">
+                <h3 class="reviews__username">Monica Gastambite</h3>
+                <time class="reviews__date" datetime="2018-12-05">Stayed 05 Dec, 2018</time>
+                <div class="reviews__stars">
+                  <img class="reviews__stars-img" src="img/Star.svg" alt="star" />
+                  <img class="reviews__stars-img" src="img/Star.svg" alt="star" />
+                  <img class="reviews__stars-img" src="img/Star.svg" alt="star" />
+                  <img class="reviews__stars-img" src="img/Star.svg" alt="star" />
+                  <img class="reviews__stars-img" src="img/Star.svg" alt="star" />
+                </div>
+              </div>
+              <p class="reviews__text">I like the relaxing vibes that this resort/ hotel give to their guests. They have
+                a waterpark that both the kids and adults can enjoy. Also, they value sustainability as I have observed
+                that the toilet’s water closet uses recycled shower water.
+                Nonetheless, the food they serve in the hotel should improve in terms of taste and presentation.
+                Overall, though, I would recommend it for vacationers</p>
+            </div>
+          </div>
+        </div>
+        <button class="reviews__slider-btn reviews__slider-btn--next"></button>
+        <button class="reviews__slider-btn reviews__slider-btn--prev"></button>
+      </div>
+    </div>
+  </section>
+
   <script src="js/main.js"></script>
 </body>
 
