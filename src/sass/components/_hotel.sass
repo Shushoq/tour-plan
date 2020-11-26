@@ -122,6 +122,10 @@
     color: inherit
     background-color: $accent-color
     border-radius: 4px
+    transition: background-color .25s ease-in-out
+    &:hover
+      background-color: darken($accent-color, 10%)
+      transition: background-color .25s ease-in-out
   &__room
     display: flex
     align-items: center

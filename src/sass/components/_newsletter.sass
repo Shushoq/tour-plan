@@ -2,7 +2,6 @@
   position: relative
   z-index: 10
   padding: 99px 0 88px
-
   background-image: url('../img/newsletter-bg.jpg')
   background-attachment: fixed
   background-position: center
@@ -67,3 +66,7 @@
     font-weight: 700
     font-size: 12px
     color: $white-color
+    transition: background-color .25s ease-in-out
+    &:hover
+      background-color: darken($accent-color, 10%)
+      transition: background-color .25s ease-in-out
