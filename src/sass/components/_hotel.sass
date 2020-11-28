@@ -24,13 +24,6 @@
     color: $primary-color
     text-transform: uppercase
     margin-right: 15px
-  &__offer
-    padding: 5px 9px
-    color: $white-color
-    font-weight: 600
-    font-size: 10px
-    background-color: $accent-color
-    border-radius: 3px
   &__descr
     font-size: 12px
     line-height: 15px
@@ -99,6 +92,8 @@
     display: flex
     flex-wrap: wrap
     justify-content: space-between
+  &__room
+    margin-top: 3px
   &__price
     display: flex
     flex-direction: column
@@ -126,34 +121,6 @@
     &:hover
       background-color: darken($accent-color, 10%)
       transition: background-color .25s ease-in-out
-  &__room
-    display: flex
-    align-items: center
-    flex-direction: column
-    margin-top: 3px
-    font-size: 12px
-    font-weight: 400
-    &-text
-      position: relative
-      &:first-child
-        margin-bottom: 11px
-        &::after
-          content: ''
-          position: absolute
-          left: -25px
-          top: 0
-          width: 14px
-          height: 14px
-          background-image: url('../img/guest.svg')
-      &:last-child
-        &::after
-          content: ''
-          position: absolute
-          left: -27px
-          top: -1px
-          width: 14px
-          height: 14px
-          background-image: url('../img/home.svg')
   &__call
     display: flex
     justify-content: space-between
@@ -199,3 +166,46 @@
     font-size: 8px
   &__counter
     font-size: 14px
+.offer
+  padding: 5px 9px
+  color: $white-color
+  font-weight: 600
+  font-size: 10px
+  background-color: $accent-color
+  border-radius: 3px
+.room
+  display: flex
+  align-items: center
+  flex-direction: column
+  font-size: 12px
+  font-weight: 400
+  &__text
+    position: relative
+    &--guest
+      margin-bottom: 11px
+      &::after
+        content: ''
+        position: absolute
+        left: -25px
+        top: 0
+        width: 14px
+        height: 14px
+        background-image: url('../img/guest.svg')
+    &--room
+      &::after
+        content: ''
+        position: absolute
+        left: -27px
+        top: -1px
+        width: 14px
+        height: 14px
+        background-image: url('../img/home.svg')
+    &--geo
+      &::after
+        content: ''
+        position: absolute
+        left: -27px
+        top: -1px
+        width: 14px
+        height: 14px
+        background-image: url('../img/location.svg')
