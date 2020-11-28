@@ -5,6 +5,9 @@
     &__item
       width: 220px
       height: 220px
+  .packages
+    &__text
+      font-size: 13px
 @media (max-width: 992px)
   .container
     max-width: 720px
@@ -52,6 +55,8 @@
       margin-right: 109px
     &__subtitle
       margin-bottom: 4px
+  .title
+    font-size: 30px
   .reviews
     &__item
       width: 579px
@@ -59,7 +64,6 @@
         display: none
     &__title
       margin-bottom: 51px
-      font-size: 30px
     &__text
       max-width: 455px
     &__slider
@@ -82,6 +86,9 @@
         margin-bottom: 20px
     &__title
       max-width: 200px
+  .packages
+    &__grid
+      grid-template-columns: 1fr 1fr
 @media (max-width: 767px)
   .container
     max-width: 540px
@@ -161,10 +168,44 @@
         margin-bottom: 15px
       &:nth-child(4n-3)
         margin-bottom: 15px
+  .packages
+    &__title
+      margin-bottom: 50px
+    &__grid
+      grid-template-columns: 100%
+    &__item
+      &--big
+        grid-template-columns: 1fr
+        grid-column: span 1
+        grid-template-rows: 250px minmax(250px, max-content)
+    &__text
+      display: none
+    &__stars
+      display: none
+    &__descr
+      padding: 32px 21px 30px 32px
+    &__subtitle
+      margin-bottom: 26px
+    &__rooms
+      margin-bottom: 27px
+    &__offer
+      font-size: 8px
+      padding: 5px 9px
+    &__prices
+      margin-bottom: 15px
+    &__btn
+      position: static
+      width: 100%
 @media (max-width: 576px)
   .container
     padding: 0
     width: 87%
+  .hotel
+    padding-bottom: 20px
+  .packages
+    padding-top: 20px
+    &__title
+      margin-bottom: 40px
   .newsletter
     padding: 77px 0 83px
     &__text
@@ -174,6 +215,8 @@
       margin-bottom: 8px
     &__title
       font-size: 30px
+  .title
+    font-size: 25px
   .reviews
     &__text
       width: 78%
@@ -181,8 +224,6 @@
     &__item
       padding-bottom: 35px
       width: 100%
-    &__title
-      font-size: 25px
   .activities
     padding-top: 22px
     &__title
@@ -227,10 +268,11 @@
       height: 210px
     &__map
       height: 173px
+  .title
+    font-size: 18px
   .reviews
     padding-top: 40px
     &__title
-      font-size: 18px
       line-height: 23px
       width: 230px
       margin-left: auto
