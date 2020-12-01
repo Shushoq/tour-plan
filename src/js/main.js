@@ -1,14 +1,18 @@
-// const burger = document.querySelector('.burger');
-// const menu = document.querySelector('.menu');
-// const closeElem = document.querySelector('.menu__close');
+const burger = document.querySelector('.header__burger');
+const menu = document.querySelector('.nav');
+const search = document.querySelector('.header__search');
+const user = document.querySelector('.header__user');
 
-// burger.addEventListener('click', () => {
-//   menu.classList.add('menu_active');
-// })
+burger.addEventListener('click', () => {
+  menu.classList.toggle('nav--active')
+  search.classList.toggle('header__search--active')
+  user.classList.toggle('header__user--active')
+})
 
 // closeElem.addEventListener('click', () => {
 //   menu.classList.remove('menu_active');
 // })
+
 import Swiper from "swiper";
 
 
