@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/style.min.css" />
 </head>
 
-<body>
+<body class="body">
   @include('html/header.html')
   @include('html/nav.html')
 
@@ -77,7 +77,7 @@
               <span class="hotel__call-text">Quick Booking</span>
               <a href="tel:12100" class="hotel__call-link">12100</a>
             </div>
-            <button class="hotel__button btn">View Other Options</button>
+            <button class="hotel__button btn" data-toggle="modal">View Other Options</button>
           </div>
           <div id="map" class="hotel__map">
           </div>
@@ -329,6 +329,34 @@
   </section>
 
   @include('html/footer.html')
+
+  <div class="modal">
+    <div class="modal__overlay"></div>
+    <div class="modal__dialog">
+      <h3 class="modal__title">Booking</h3>
+      <form class="form modal__form" action="send.php" method="POST">
+        <div class="modal__input-group">
+          <input class="input modal__input name" type="text" name="name" placeholder="Your Full Name*" id="name">
+        </div>
+        <div class="modal__input-group">
+          <input class="input modal__input" type="tel" name="phone" placeholder="Phone Number*">
+        </div>
+        <div class="modal__input-group">
+          <input class="input modal__input" type="email" name="email" placeholder="Email*">
+        </div>
+        <textarea class="textarea modal__textarea" name="message" placeholder="Message"></textarea>
+        <div class="modal__form-bottom">
+          <button class="btn modal__btn" name="button" value="booking-form">Send</button>
+          <span class="modal__form-text">* Required Fields</span>
+        </div>
+      </form>
+      <button class="modal__close" aria-label="Close modal window">
+        <svg class="modal__close-btn">
+          <use xlink:href="img/sprite.svg#modal-close"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
 
   <script src="js/main.js"></script>
 </body>

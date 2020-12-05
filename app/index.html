@@ -8,11 +8,11 @@
   <link rel="stylesheet" href="css/style.min.css" />
 </head>
 
-<body>
+<body class="body">
   <header class="header">
   <div class="container">
     <div class="header__top">
-      <a class="logo header__logo" href="/" aria-label="logo: best tour plan">
+      <a class="logo header__logo" href="index.html" aria-label="logo: best tour plan">
         <svg class="logo__img">
           <use xlink:href="img/sprite.svg#logo"></use>
         </svg>
@@ -125,7 +125,7 @@
               <span class="hotel__call-text">Quick Booking</span>
               <a href="tel:12100" class="hotel__call-link">12100</a>
             </div>
-            <button class="hotel__button btn">View Other Options</button>
+            <button class="hotel__button btn" data-toggle="modal">View Other Options</button>
           </div>
           <div id="map" class="hotel__map">
           </div>
@@ -379,7 +379,7 @@
   <footer class="footer">
   <div class="container">
     <div class="footer__wrapper">
-      <a class="footer__logo" href="/" aria-label="logo: best tour plan">
+      <a class="footer__logo" href="index.html" aria-label="logo: best tour plan">
         <svg class="footer__logo-img">
           <use xlink:href="img/sprite.svg#logo-footer"></use>
         </svg>
@@ -495,6 +495,34 @@
   </div>
 </footer>
 
+
+  <div class="modal">
+    <div class="modal__overlay"></div>
+    <div class="modal__dialog">
+      <h3 class="modal__title">Booking</h3>
+      <form class="form modal__form" action="send.php" method="POST">
+        <div class="modal__input-group">
+          <input class="input modal__input name" type="text" name="name" placeholder="Your Full Name*" id="name">
+        </div>
+        <div class="modal__input-group">
+          <input class="input modal__input" type="tel" name="phone" placeholder="Phone Number*">
+        </div>
+        <div class="modal__input-group">
+          <input class="input modal__input" type="email" name="email" placeholder="Email*">
+        </div>
+        <textarea class="textarea modal__textarea" name="message" placeholder="Message"></textarea>
+        <div class="modal__form-bottom">
+          <button class="btn modal__btn" name="button" value="booking-form">Send</button>
+          <span class="modal__form-text">* Required Fields</span>
+        </div>
+      </form>
+      <button class="modal__close" aria-label="Close modal window">
+        <svg class="modal__close-btn">
+          <use xlink:href="img/sprite.svg#modal-close"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
 
   <script src="js/main.js"></script>
 </body>

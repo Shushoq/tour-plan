@@ -17,11 +17,22 @@ $title = "Новое обращение Best Tour Plan";
 $body = "
 <h2>Новое обращение</h2>
 <b>Имя:</b> $name<br>
-<b>Телефон:</b> $phone<br><br>
+<b>Телефон:</b> $phone<br>
+<>Email:</> $email<br><br>
 <b>Сообщение:</b><br>$message
 ";
 };
 
+if ($button == 'booking-form'){
+$title = "Новое обращение Best Tour Plan";
+$body = "
+<h2>Новое обращение</h2>
+<b>Имя:</b> $name<br>
+<b>Телефон:</b> $phone<br><br>
+<b>Email:</b> $email<br><br>
+<b>Сообщение:</b><br>$message
+";
+};
 
 if ($button == 'subscribe-form'){
   $title = "Новое подписка на рассылку Best Tour Plan";
@@ -30,6 +41,8 @@ if ($button == 'subscribe-form'){
   <b>Email:</b> $email
   ";
 };
+
+
 
 // Настройки PHPMailer
 $mail = new PHPMailer\PHPMailer\PHPMailer();
@@ -65,7 +78,7 @@ else {$result = "error";}
     $status = "Сообщение не было отправлено. Причина ошибки: {$mail->ErrorInfo}";
 }
 
-if ($button == 'message-form'){
+if ($button == ('message-form' || 'booking-form')){
   header('location: thanks.html');
 }
 

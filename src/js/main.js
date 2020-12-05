@@ -70,3 +70,37 @@ maps.addEventListener('click', () => {
   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7500.746811551891!2d-122.42303962194119!3d37.774205101819256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808580a196ede719%3A0x2fb5607634331f2f!2zSGF5ZXMgVmFsbGV5LCDQodCw0L0t0KTRgNCw0L3RhtC40YHQutC-LCDQmtCw0LvQuNGE0L7RgNC90LjRjyA5NDEwMiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1606217945560!5m2!1sru!2sru"
   style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>`
 })
+
+const modalDialog = document.querySelector('.modal__dialog')
+const modalOverlay = document.querySelector('.modal__overlay')
+const close = document.querySelector('.modal__close')
+const modalToggle = document.querySelector('[data-toggle=modal]')
+const bodyScroll = document.querySelector('.body')
+
+function modalClose() {
+  modalDialog.classList.remove('modal__dialog--active')
+  modalOverlay.classList.remove('modal__overlay--active')
+  bodyScroll.classList.remove('modal__open')
+}
+
+modalToggle.addEventListener('click', () => {
+  modalDialog.classList.add('modal__dialog--active')
+  modalOverlay.classList.add('modal__overlay--active')
+  bodyScroll.classList.add('modal__open')
+})
+
+close.addEventListener('click', () => {
+  modalClose()
+})
+
+window.addEventListener('keydown', (event) => {
+  if (event.keyCode === 27) {
+    modalClose()
+  }
+})
+
+modalOverlay.addEventListener('click', () => {
+  modalClose()
+})
+
+
