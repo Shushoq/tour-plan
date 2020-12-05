@@ -150,6 +150,9 @@
         margin: 0
       &-img
         top: 31px
+  .modal
+    &__open
+      padding-right: 0
 @media (max-width: 767px)
   body
     padding-top: 70px
@@ -157,25 +160,23 @@
     max-width: 540px
   .nav
     position: fixed
-    transform: translateX(-150%)
+    transition: left 0.7s ease
     padding: 0
-    transition: transform 0.9s ease
     z-index: 100
-    left: 0
-    right: 0
+    left: -200%
     bottom: 0
     top: 70px
-    overflow-y: auto
+    width: 100%
     &__list
       flex-direction: column
       align-items: center
-      margin-top: 204px
+      margin-top: 32px
     &__item
       margin-bottom: 17px
     &--active
-      z-index: 500
-      transform: translateX(0)
-      transition: transform 0.5s ease
+      left: 0
+      transition: left 0.7s ease
+      overflow-y: auto
   .header
     position: fixed
     left: 0
@@ -184,29 +185,20 @@
     z-index: 600
     padding: 25px 0
     &__search
-      position: absolute
-      top: 197px
-      left: 0
-      width: 77%
-      transform: translateX(-250%)
-      transition: all 0.8s ease
-      &--active
-        left: 50%
-        transform: translateX(-50%)
-        transition: all 0.45s ease
+      width: 88%
+      margin: 0 auto
+      margin-bottom: 19px
+      &--hidden
+        display: none
+      &--visible
+        display: block
     &__user
-      position: absolute
-      display: flex
-      flex-direction: column
-      align-items: center
-      top: 102px
-      left: 0
-      transform: translateX(-250%)
-      transition: all 0.5s ease
-      &--active
-        left: 50%
-        transform: translateX(-50%)
-        transition: all 0.5s ease
+      &--hidden
+        display: none
+      &--visible
+        display: flex
+        flex-direction: column
+        margin-bottom: 11px
     &__burger
       display: flex
       flex-direction: column
@@ -427,7 +419,21 @@
           margin-right: 7px
       &-img
         position: static
+  .modal
+    &__dialog
+      width: 87%
+      padding-left: 30px
+      padding-right: 30px
 @media (max-width: 480px)
+  .modal
+    &__form
+      &-bottom
+        justify-content: flex-end
+      &-text
+        order: -1
+        margin-bottom: 15px
+    &__btn
+      width: 100%
   .header
     padding: 21px 0 23px
   .logo

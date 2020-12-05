@@ -1,12 +1,12 @@
 const burger = document.querySelector('.header__burger');
 const menu = document.querySelector('.nav');
-const search = document.querySelector('.header__search');
-const user = document.querySelector('.header__user');
+// const search = document.querySelector('.header__search');
+// const user = document.querySelector('.header__user');
 
 burger.addEventListener('click', () => {
   menu.classList.toggle('nav--active')
-  search.classList.toggle('header__search--active')
-  user.classList.toggle('header__user--active')
+  // search.classList.toggle('header__search--active')
+  // user.classList.toggle('header__user--active')
 })
 
 import Swiper from "swiper";
@@ -27,6 +27,8 @@ const hotelSwiper = new Swiper(".hotel__slider", {
     onlyInViewport: true,
     pageUpDown: true,
   },
+  preloadImages: false,
+  lazy: true,
 });
 
 const reviewsSwiper = new Swiper(".reviews__slider", {
@@ -36,6 +38,7 @@ const reviewsSwiper = new Swiper(".reviews__slider", {
     nextEl: ".reviews__slider-btn--next",
     prevEl: ".reviews__slider-btn--prev",
   },
+  autoHeight: true,
 });
 
 
@@ -74,8 +77,13 @@ maps.addEventListener('click', () => {
 const modalDialog = document.querySelector('.modal__dialog')
 const modalOverlay = document.querySelector('.modal__overlay')
 const close = document.querySelector('.modal__close')
-const modalToggle = document.querySelector('[data-toggle=modal]')
+// const modalToggle = document.querySelector('[data-toggle=modal]')
 const bodyScroll = document.querySelector('.body')
+
+const modalToggle = document.querySelectorAll('[data-toggle=modal]')
+modalToggle.forEach(el => {
+  el.addEventListener('click', modalOpen)
+})
 
 function modalClose() {
   modalDialog.classList.remove('modal__dialog--active')
@@ -83,11 +91,15 @@ function modalClose() {
   bodyScroll.classList.remove('modal__open')
 }
 
-modalToggle.addEventListener('click', () => {
+function modalOpen() {
   modalDialog.classList.add('modal__dialog--active')
   modalOverlay.classList.add('modal__overlay--active')
   bodyScroll.classList.add('modal__open')
-})
+}
+
+// modalToggle.addEventListener('click', () => {
+//   modalOpen()
+// })
 
 close.addEventListener('click', () => {
   modalClose()
@@ -102,5 +114,3 @@ window.addEventListener('keydown', (event) => {
 modalOverlay.addEventListener('click', () => {
   modalClose()
 })
-
-

@@ -17,7 +17,7 @@
           <use xlink:href="img/sprite.svg#logo"></use>
         </svg>
       </a>
-      <form class="search header__search" action="#">
+      <form class="search header__search header__search--hidden" action="#">
         <input class="search__field" id="search" type="search" placeholder="" />
         <label class="search__placeholder" for="search">Search Location</label>
         <button class="search__button btn">
@@ -26,7 +26,7 @@
           </svg>
         </button>
       </form>
-      <a class="user header__user" href="#">
+      <a class="user header__user header__user--hidden" href="#">
         <img class="user__avatar" src="img/user-avatar.jpg" alt="user avatar" />
         <span class="user__name">Nathan</span>
       </a>
@@ -42,6 +42,23 @@
   <nav class="nav">
   <div class="container">
     <ul class="nav__list">
+      <li class="nav__item">
+        <a class="user header__user header__user--visible" href="#">
+          <img class="user__avatar" src="img/user-avatar.jpg" alt="user avatar" />
+          <span class="user__name">Nathan</span>
+        </a>
+      </li>
+      <li class="nav__item">
+        <form class="search header__search header__search--visible" action="#">
+          <input class="search__field" id="search" type="search" placeholder="" />
+          <label class="search__placeholder" for="search">Search Location</label>
+          <button class="search__button btn">
+            <svg class="search__img">
+              <use xlink:href="img/sprite.svg#search"></use>
+            </svg>
+          </button>
+        </form>
+      </li>
       <li class="nav__item"><a href="#" class="nav__link">All Deals</a></li>
       <li class="nav__item"><a href="#" class="nav__link">Hotels</a></li>
       <li class="nav__item">

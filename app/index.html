@@ -17,7 +17,7 @@
           <use xlink:href="img/sprite.svg#logo"></use>
         </svg>
       </a>
-      <form class="search header__search" action="#">
+      <form class="search header__search header__search--hidden" action="#">
         <input class="search__field" id="search" type="search" placeholder="" />
         <label class="search__placeholder" for="search">Search Location</label>
         <button class="search__button btn">
@@ -26,7 +26,7 @@
           </svg>
         </button>
       </form>
-      <a class="user header__user" href="#">
+      <a class="user header__user header__user--hidden" href="#">
         <img class="user__avatar" src="img/user-avatar.jpg" alt="user avatar" />
         <span class="user__name">Nathan</span>
       </a>
@@ -42,6 +42,23 @@
   <nav class="nav">
   <div class="container">
     <ul class="nav__list">
+      <li class="nav__item">
+        <a class="user header__user header__user--visible" href="#">
+          <img class="user__avatar" src="img/user-avatar.jpg" alt="user avatar" />
+          <span class="user__name">Nathan</span>
+        </a>
+      </li>
+      <li class="nav__item">
+        <form class="search header__search header__search--visible" action="#">
+          <input class="search__field" id="search" type="search" placeholder="" />
+          <label class="search__placeholder" for="search">Search Location</label>
+          <button class="search__button btn">
+            <svg class="search__img">
+              <use xlink:href="img/sprite.svg#search"></use>
+            </svg>
+          </button>
+        </form>
+      </li>
       <li class="nav__item"><a href="#" class="nav__link">All Deals</a></li>
       <li class="nav__item"><a href="#" class="nav__link">Hotels</a></li>
       <li class="nav__item">
@@ -58,7 +75,6 @@
     </ul>
   </div>
 </nav>
-
 
   <nav class="breadcrumb">
     <div class="container">
@@ -168,7 +184,7 @@
               <span class="packages__pricetag packages__pricetag--old">$ 10,500</span>
               <span class="packages__pricetag packages__pricetag--new">$ 8,500</span>
             </div>
-            <button class="packages__btn btn">Book Now</button>
+            <button class="packages__btn btn" data-toggle="modal">Book Now</button>
           </div>
         </li>
         <li class="packages__item packages__item--small">
@@ -188,7 +204,7 @@
               <span class="packages__pricetag packages__pricetag--old">$ 8,500</span>
               <span class="packages__pricetag packages__pricetag--new">$ 3,000</span>
             </div>
-            <button class="packages__btn packages__btn--small btn">Book Now</button>
+            <button class="packages__btn packages__btn--small btn" data-toggle="modal">Book Now</button>
           </div>
         </li>
         <li class="packages__item packages__item--small">
@@ -208,7 +224,7 @@
               <span class="packages__pricetag packages__pricetag--old">$ 10,500</span>
               <span class="packages__pricetag packages__pricetag--new">$ 9,000</span>
             </div>
-            <button class="packages__btn packages__btn--small btn">Book Now</button>
+            <button class="packages__btn packages__btn--small btn" data-toggle="modal">Book Now</button>
           </div>
         </li>
         <li class="packages__item packages__item--small">
@@ -228,7 +244,7 @@
               <span class="packages__pricetag packages__pricetag--old">$ 4,500</span>
               <span class="packages__pricetag packages__pricetag--new">$ 2,000</span>
             </div>
-            <button class="packages__btn packages__btn--small btn">Book Now</button>
+            <button class="packages__btn packages__btn--small btn" data-toggle="modal">Book Now</button>
           </div>
         </li>
         <li class="packages__item packages__item--small">
@@ -248,7 +264,7 @@
               <span class="packages__pricetag packages__pricetag--old">$ 6,500</span>
               <span class="packages__pricetag packages__pricetag--new">$ 3,500</span>
             </div>
-            <button class="packages__btn packages__btn--small btn">Book Now</button>
+            <button class="packages__btn packages__btn--small btn" data-toggle="modal">Book Now</button>
           </div>
         </li>
       </ul>
@@ -351,26 +367,26 @@
           <img class="card__img" src="img/card-1.jpg" alt="The curious corner
           of chamarel">
           <h3 class="card__title">The curious corner of&nbsp;chamarel</h3>
-          <button class="card__btn btn">Book Now</button>
+          <button class="card__btn btn" data-toggle="modal">Book Now</button>
         </li>
         <li class="card__item">
           <img class="card__img" src="img/card-2.jpg" alt="Gymkhana club golf
           course">
           <h3 class="card__title">Gymkhana club golf course</h3>
-          <button class="card__btn btn">Book Now</button>
+          <button class="card__btn btn" data-toggle="modal">Book Now</button>
         </li>
         <li class="card__item">
           <img class="card__img" src="img/card-3.jpg" alt="Tamarind falls hiking
           trip - full day">
           <h3 class="card__title">Tamarind falls hiking trip&nbsp;- full day
           </h3>
-          <button class="card__btn btn">Book Now</button>
+          <button class="card__btn btn" data-toggle="modal">Book Now</button>
         </li>
         <li class="card__item">
           <img class="card__img" src="img/card-4.jpg" alt="The blue marine discovery
           quest">
           <h3 class="card__title">The blue marine discovery quest</h3>
-          <button class="card__btn btn">Book Now</button>
+          <button class="card__btn btn" data-toggle="modal">Book Now</button>
         </li>
       </ul>
     </div>
