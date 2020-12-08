@@ -54,15 +54,16 @@ function validateForms(selector, rules, messages) {
     rules: rules,
     messages: {
       tel: {
-        strength: 'Введите корректный номер телефон',
-        required: 'Введите номер телефона'
+        strength: 'Enter the correct phone number',
+        required: 'Enter your phone number'
       },
-      name: 'Введите имя',
-      email: 'Введите корректный email'
+      name: {
+        required: 'Enter your name',
+        minLength: 'The name must not be less than 2 letters'
+      },
+      email: 'Please enter a valid email'
     },
     submitHandler: function (form, values, ajax) {
-      // console.log(form);
-
       let formData = new FormData(form);
 
       fetch("sendmail.php", {
@@ -70,8 +71,6 @@ function validateForms(selector, rules, messages) {
           body: formData
         })
         .then(function (data) {
-          // console.log(data);
-          // console.log('Отправлено');
           if (selector === ".subscribe__form") {
             window.location.replace("subscribe.html")
           } else {
@@ -89,7 +88,8 @@ validateForms('.modal__form', {
     email: true
   },
   name: {
-    required: true
+    required: true,
+    minLength: 2,
   },
   tel: {
     required: true,
@@ -102,7 +102,7 @@ validateForms('.modal__form', {
 validateForms('.footer__form', {
   name: {
     required: true,
-    minLength: 3,
+    minLength: 2,
   },
   tel: {
     required: true,
@@ -163,3 +163,9 @@ window.addEventListener('keydown', (event) => {
 modalOverlay.addEventListener('click', () => {
   modalClose()
 })
+
+import AOS from 'aos'
+
+AOS.init({
+  easing: 'ease-in-sine',
+});
