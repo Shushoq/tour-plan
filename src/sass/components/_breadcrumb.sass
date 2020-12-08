@@ -4,9 +4,19 @@
     display: flex
     align-items: center
     font-size: 10px
-    color: $primary-color
+
   &__item
     &:not(:last-child)
       &:after
         content: "/"
         margin-right: 4px
+  &__link
+    color: $primary-color
+    transition: color .25s ease
+
+@media(hover: hover) and (pointer: fine)
+  .breadcrumb
+    &__link
+      &:hover
+        color: $accent-color
+        transition: color .25s ease

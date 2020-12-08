@@ -84,7 +84,7 @@
     font-size: 14px
     font-weight: 400
     color: $primary-color
-
+    transition: color .25s ease-in-out
 .header
   &__user
     &--visible
@@ -94,3 +94,11 @@
     opacity: 1
   100%
     opacity: 0
+
+@media(hover: hover) and (pointer: fine)
+  .user
+    &:hover
+      .user
+        &__name
+          color: $accent-color
+          transition: color .25s ease-in-out

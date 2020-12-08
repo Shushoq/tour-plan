@@ -78,15 +78,32 @@
   &__link
     font-size: 14px
     line-height: 160%
+    transition: color .25s ease
     &-img
       width: 20px
       height: 20px
+      fill: $footer-color
+      transition: fill .25s ease
+      &--facebook
+        &:hover
+          fill: #3b5999
+          transition: fill .25s ease
+      &--youtube
+        &:hover
+          fill: #cd201f
+          transition: fill .25s ease
+      &--instagram
+        &:hover
+          fill: #e4405f
+          transition: fill .25s ease
   &__text
     font-size: 14px
     line-height: 160%
   &__phone
     font-size: 14px
     line-height: 160%
+    &-link
+      transition: color .25s ease
   &__contact
     grid-column: span 2
     padding-top: 32px
@@ -108,14 +125,20 @@
       font-size: 12px
       color: #e0e0e0
   &__input
-    margin-bottom: 15px
     padding: 16px 23px
+    &::placeholder
+      color: $footer-color
+      opacity: 1
     &-group
       width: 47%
   &__textarea
     padding: 18px 23px
+    margin-top: 15px
     margin-bottom: 23px
     min-height: 123px
+    &::placeholder
+      color: $footer-color
+      opacity: 1
   &__btn
     min-width: 160px
     min-height: 50px
@@ -134,9 +157,27 @@
     &-link
       font-size: 12px
       color: $white-color
+      transition: color .25s ease
     &-img
       position: absolute
       right: 0
       top: 44px
       min-width: 136px
       height: 22px
+
+@media(hover: hover) and (pointer: fine)
+  .footer
+    &__link
+      &:hover
+        color: $accent-color
+        transition: color .25s ease
+    &__bottom
+      &-link
+        &:hover
+          color: $accent-color
+          transition: color .25s ease
+    &__phone
+      &-link
+        &:hover
+          color: $accent-color
+          transition: color .25s ease

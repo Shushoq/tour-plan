@@ -3,9 +3,20 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Best Tour Plan - Hotel Booking</title>
-  <link rel="stylesheet" href="css/style.min.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link href="fonts/Mulish-Bold.woff2" rel="preload" as="font" crossorigin>
+  <link href="fonts/Mulish-Light.woff2" rel="preload" as="font" crossorigin>
+  <link href="fonts/Mulish-Regular.woff2" rel="preload" as="font" crossorigin>
+  <link href="fonts/Mulish-SemiBold.woff2" rel="preload" as="font" crossorigin>
+  <link href="fonts/Nunito-ExtraBold.woff2" rel="preload" as="font" crossorigin>
+  <link href="fonts/Nunito-Regular.woff2" rel="preload" as="font" crossorigin>
+  <link href="fonts/Nunito-SemiBold.woff2" rel="preload" as="font" crossorigin>
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body class="body">
@@ -212,9 +223,11 @@
         <span class="newsletter__subtitle">subscribe to our</span>
         <h2 class="newsletter__title">Newsletter</h2>
       </div>
-      <form class="subscribe newsletter__subscribe" action="send.php" method="POST">
-        <input class="subscribe__field" name="email" type="text" placeholder="Your email address">
+      <form class="subscribe newsletter__subscribe subscribe__form">
+        <input class="subscribe__field" name="email" type="text" placeholder="Your email address" data-validate-field="email">
         <button class="subscribe__button btn" name="button" value="subscribe-form">Send</button>
+        <input type="hidden" name="admin_email[]" value="wywkoff@gmail.com">
+          <input type="hidden" name="form_subject" value="Новая подписка Best Tour plan">
       </form>
     </div>
   </section>
@@ -227,7 +240,8 @@
           <div class="reviews__slide swiper-slide">
             <div class="reviews__item">
               <div class="reviews__profile">
-                <img class="reviews__avatar" src="img/reviews-avatar-1.jpg" alt="avatar: Megan Fox">
+                <div class="swiper-lazy-preloader"></div>
+                <img class="reviews__avatar swiper-lazy" src="#" data-src="img/reviews-avatar-1.jpg" alt="avatar: Megan Fox">
                 <h3 class="reviews__username">Megan Fox</h3>
                 <time class="reviews__date" datetime="2019-11-18">Stayed 18 Nov, 2019</time>
                 <div class="reviews__stars">
@@ -249,7 +263,8 @@
           <div class="reviews__slide swiper-slide">
             <div class="reviews__item">
               <div class="reviews__profile">
-                <img class="reviews__avatar" src="img/reviews-avatar-2.jpg" alt="avatar: Jeffri Larsen">
+                <div class="swiper-lazy-preloader"></div>
+                <img class="reviews__avatar swiper-lazy" src="#" data-src="img/reviews-avatar-2.jpg" alt="avatar: Jeffri Larsen">
                 <h3 class="reviews__username">Jeffri Larsen</h3>
                 <time class="reviews__date" datetime="2020-11-06">Stayed 18 Jun, 2020</time>
                 <div class="reviews__stars">
@@ -269,7 +284,8 @@
           <div class="reviews__slide swiper-slide">
             <div class="reviews__item">
               <div class="reviews__profile">
-                <img class="reviews__avatar" src="img/reviews-avatar-3.jpg" alt="avatar: Monica Gastambite">
+                <div class="swiper-lazy-preloader"></div>
+                <img class="reviews__avatar swiper-lazy" src="#" data-src="img/reviews-avatar-3.jpg" alt="avatar: Monica Gastambite">
                 <h3 class="reviews__username">Monica Gastambite</h3>
                 <time class="reviews__date" datetime="2018-12-05">Stayed 05 Dec, 2018</time>
                 <div class="reviews__stars">
@@ -333,21 +349,23 @@
     <div class="modal__overlay"></div>
     <div class="modal__dialog">
       <h3 class="modal__title">Booking</h3>
-      <form class="form modal__form" action="send.php" method="POST">
+      <form class="form modal__form">
         <div class="modal__input-group">
-          <input class="input modal__input name" type="text" name="name" placeholder="Your Full Name*" id="name">
+          <input class="input modal__input name" type="text" name="name" placeholder="Your Full Name*" data-validate-field="name">
         </div>
         <div class="modal__input-group">
-          <input class="input modal__input" type="tel" name="phone" placeholder="Phone Number*">
+          <input class="input modal__input" type="tel" name="phone" placeholder="Phone Number*" data-validate-field="tel">
         </div>
         <div class="modal__input-group">
-          <input class="input modal__input" type="email" name="email" placeholder="Email*">
+          <input class="input modal__input" type="email" name="email" placeholder="Email*" data-validate-field="email">
         </div>
         <textarea class="textarea modal__textarea" name="message" placeholder="Message"></textarea>
         <div class="modal__form-bottom">
           <button class="btn modal__btn" name="button" value="booking-form">Send</button>
           <span class="modal__form-text">* Required Fields</span>
         </div>
+        <input type="hidden" name="admin_email[]" value="wywkoff@gmail.com">
+          <input type="hidden" name="form_subject" value="Заявка с сайта Best Tour plan">
       </form>
       <button class="modal__close" aria-label="Close modal window">
         <svg class="modal__close-btn">

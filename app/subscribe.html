@@ -3,9 +3,20 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Best Tour Plan - Hotel Booking</title>
-  <link rel="stylesheet" href="css/style.min.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link href="fonts/Mulish-Bold.woff2" rel="preload" as="font" crossorigin>
+  <link href="fonts/Mulish-Light.woff2" rel="preload" as="font" crossorigin>
+  <link href="fonts/Mulish-Regular.woff2" rel="preload" as="font" crossorigin>
+  <link href="fonts/Mulish-SemiBold.woff2" rel="preload" as="font" crossorigin>
+  <link href="fonts/Nunito-ExtraBold.woff2" rel="preload" as="font" crossorigin>
+  <link href="fonts/Nunito-Regular.woff2" rel="preload" as="font" crossorigin>
+  <link href="fonts/Nunito-SemiBold.woff2" rel="preload" as="font" crossorigin>
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
@@ -42,15 +53,15 @@
   <nav class="nav">
   <div class="container">
     <ul class="nav__list">
-      <li class="nav__item">
-        <a class="user header__user header__user--visible" href="#">
+      <li class="nav__item nav__item--mobile">
+        <a class="user user--mobile" href="#">
           <img class="user__avatar" src="img/user-avatar.jpg" alt="user avatar" />
           <span class="user__name">Nathan</span>
         </a>
       </li>
-      <li class="nav__item">
-        <form class="search header__search header__search--visible" action="#">
-          <input class="search__field" id="search" type="search" placeholder="" />
+      <li class="nav__item nav__item--mobile">
+        <form class="search search--mobile" action="#">
+          <input class="search__field" id="search1" type="search" placeholder="" />
           <label class="search__placeholder" for="search">Search Location</label>
           <button class="search__button btn">
             <svg class="search__img">
@@ -127,18 +138,18 @@
       <div class="footer__list footer__social">
         <h3 class="footer__title footer__title--inline">Social Network</h3>
         <ul class="footer__items footer__items-links">
-          <li class="footer__item"><a href="#" class="footer__link">
-              <svg class="footer__link-img">
+          <li class="footer__item"><a href="https://www.facebook.com/" class="footer__link" target="_blank">
+              <svg class="footer__link-img footer__link-img--facebook">
                 <use xlink:href="img/sprite.svg#facebook"></use>
               </svg>
             </a></li>
-          <li class="footer__item"><a href="#" class="footer__link">
-              <svg class="footer__link-img">
+          <li class="footer__item"><a href="https://www.youtube.com/" class="footer__link" target="_blank">
+              <svg class="footer__link-img footer__link-img--youtube">
                 <use xlink:href="img/sprite.svg#youtube"></use>
               </svg>
             </a></li>
-          <li class="footer__item"><a href="#" class="footer__link">
-              <svg class="footer__link-img">
+          <li class="footer__item"><a href="https://www.instagram.com/" class="footer__link" target="_blank">
+              <svg class="footer__link-img footer__link-img--instagram">
                 <use xlink:href="img/sprite.svg#instagram"></use>
               </svg>
             </a></li>
@@ -160,7 +171,8 @@
         <h3 class="footer__title footer__title--contact">Contact details</h3>
         <p class="footer__text">Feel free to contact us by phone, email or by our contact form</p>
         <ul class="footer__items">
-          <li class="footer__item footer__item-contact footer__item-contact--geo"><a href="#" class="footer__link">9748
+          <li class="footer__item footer__item-contact footer__item-contact--geo"><a
+              href="https://goo.gl/maps/BaJZDf28UECMGiy87" class="footer__link" target="_blank">9748
               Blossom Hill Rd
               undefined Lansing, Idaho
               68545 United States</a></li>
@@ -169,9 +181,9 @@
               <p class="footer__phone">Tel (business hours) : <a href="tel:2691500" class="footer__phone-link">269
                   1500</a></p>
               <p class="footer__phone">Tel (hotline) Monday - Saturday: <a href="tel:52566138"
-                  class="footer__phone-link"> 52-56-61-38</a> (08:00 am – 20:00 pm)</p>
+                  class="footer__phone-link"> 52&#8209;56&#8209;61&#8209;38</a> (08:00 am – 20:00 pm)</p>
               <p class="footer__phone">Tel (hotline) Sunday: <a href="tel:52566138" class="footer__phone-link">
-                  52-56-61-38</a> (08:00 am – 14:00 pm)</p>
+                  52&#8209;56&#8209;61&#8209;38</a> (08:00 am – 14:00 pm)</p>
             </div>
           </li>
           <li class="footer__item footer__item-contact footer__item-contact--mail"><a
@@ -180,18 +192,22 @@
       </div>
       <div class="footer__contact-form">
         <h3 class="footer__title footer__title--form">Send us a message</h3>
-        <form class="form footer__form" action="send.php" method="POST">
+        <form class="form footer__form">
           <div class="footer__input-group">
-            <input class="input footer__input" type="text" name="name" placeholder="Your Full Name*">
+            <input class="input footer__input" type="text" name="name" placeholder="Your Full Name*"
+              data-validate-field="name">
           </div>
           <div class="footer__input-group">
-            <input class="input footer__input" type="tel" name="phone" placeholder="Phone Number*">
+            <input class="input footer__input" type="tel" name="phone" placeholder="Phone Number*"
+              data-validate-field="tel">
           </div>
           <textarea class="textarea footer__textarea" name="message" placeholder="Message"></textarea>
           <div class="footer__form-bottom">
             <button class="btn footer__btn" name="button" value="message-form">Send</button>
             <span class="footer__form-text">* Required Fields</span>
           </div>
+          <input type="hidden" name="admin_email[]" value="wywkoff@gmail.com">
+          <input type="hidden" name="form_subject" value="Заявка с сайта Best Tour plan">
         </form>
       </div>
     </div>
@@ -209,4 +225,5 @@
 
   <script src="js/main.js"></script>
 </body>
+
 </html>

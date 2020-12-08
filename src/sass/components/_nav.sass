@@ -5,12 +5,20 @@
     display: flex
     justify-content: space-between
   &__item
+    &--mobile
+      display: none
   &__link
     font-weight: 700
     font-size: 14px
     text-transform: uppercase
     color: $white-color
     transition: color .25s ease
-    &:hover
-      color: $accent-color
-      transition: color .25s ease
+  &__open
+    overflow: hidden
+
+@media(hover: hover) and (pointer: fine)
+  .nav
+    &__link
+      &:hover
+        color: $accent-color
+        transition: color .25s ease

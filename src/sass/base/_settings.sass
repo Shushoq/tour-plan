@@ -36,13 +36,13 @@ button
   background: transparent
   cursor: pointer
 
+textarea
+  border: none
+
 .container
   margin: 0 auto
   padding: 0 10px
   max-width: 1130px
-
-.error
-  border: 2px #ff4019 solid !important
 
 .is-hidden
   display: none !important
@@ -61,9 +61,6 @@ button
   border-radius: 4px
   background-color: $accent-color
   transition: background-color .25s ease-in-out
-  &:hover
-    background-color: darken($accent-color, 10%)
-    transition: background-color .25s ease-in-out
 
 .input
   width: 100%
@@ -80,3 +77,15 @@ button
   &::placeholder
     font-size: 12px
     color: $footer-color
+
+.js-validate-error-label
+  color: $accent-color !important
+.js-validate-error-field
+  color: #000 !important
+  border: 2px solid $accent-color !important
+
+@media(hover: hover) and (pointer: fine)
+  .btn
+    &:hover
+      background-color: darken($accent-color, 15%)
+      transition: background-color .25s ease-in-out
