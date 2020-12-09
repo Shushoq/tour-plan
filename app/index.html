@@ -4,11 +4,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Booking and buying tours online">
+  <meta name="google" content="notranslate">
   <title>Best Tour Plan - Hotel Booking</title>
+
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
   <link rel="manifest" href="site.webmanifest">
+
   <link href="fonts/Mulish-Bold.woff2" rel="preload" as="font" crossorigin>
   <link href="fonts/Mulish-Light.woff2" rel="preload" as="font" crossorigin>
   <link href="fonts/Mulish-Regular.woff2" rel="preload" as="font" crossorigin>
@@ -16,6 +20,7 @@
   <link href="fonts/Nunito-ExtraBold.woff2" rel="preload" as="font" crossorigin>
   <link href="fonts/Nunito-Regular.woff2" rel="preload" as="font" crossorigin>
   <link href="fonts/Nunito-SemiBold.woff2" rel="preload" as="font" crossorigin>
+
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -107,11 +112,11 @@
         <div class="hotel__text">
           <div class="hotel__inner">
             <div class="hotel__stars">
-              <img class="hotel__stars-img" src="img/Star.svg" alt="star" />
-              <img class="hotel__stars-img" src="img/Star.svg" alt="star" />
-              <img class="hotel__stars-img" src="img/Star.svg" alt="star" />
-              <img class="hotel__stars-img" src="img/Star.svg" alt="star" />
-              <img class="hotel__stars-img" src="img/Star.svg" alt="star" />
+              <img class="hotel__stars-img" src="img/Star.svg" alt="star">
+              <img class="hotel__stars-img" src="img/Star.svg" alt="star">
+              <img class="hotel__stars-img" src="img/Star.svg" alt="star">
+              <img class="hotel__stars-img" src="img/Star.svg" alt="star">
+              <img class="hotel__stars-img" src="img/Star.svg" alt="star">
             </div>
             <h2 class="hotel__title">Grand hilton hotel</h2>
             <span class="offer hotel__offer">Flash Offer</span>
@@ -129,10 +134,34 @@
       <div class="hotel__grid">
         <div class="hotel__slider">
           <div class="swiper-wrapper">
-            <div class="hotel__slide swiper-slide"><img src="img/hotel-slider-1.jpg" alt="House"></div>
-            <div class="hotel__slide swiper-slide"><img src="img/hotel-slider-2.jpg" alt="House"></div>
-            <div class="hotel__slide swiper-slide"><img src="img/hotel-slider-3.jpg" alt="House"></div>
-            <div class="hotel__slide swiper-slide"><img src="img/hotel-slider-4.jpg" alt="House"></div>
+            <div class="hotel__slide swiper-slide">
+              <picture>
+                <source media="(max-width: 480px)" srcset="img/hotel-slider-1-small.jpg">
+                <source media="(max-width: 767px)" srcset="img/hotel-slider-1-mid.jpg">
+                <img src="img/hotel-slider-1.jpg" alt="House">
+              </picture>
+            </div>
+            <div class="hotel__slide swiper-slide">
+              <picture>
+                <source media="(max-width: 480px)" srcset="img/hotel-slider-2-small.jpg">
+                <source media="(max-width: 767px)" srcset="img/hotel-slider-2-mid.jpg">
+                <img src="img/hotel-slider-2.jpg" alt="House" loading="lazy">
+              </picture>
+            </div>
+            <div class="hotel__slide swiper-slide">
+              <picture>
+                <source media="(max-width: 480px)" srcset="img/hotel-slider-3-small.jpg">
+                <source media="(max-width: 767px)" srcset="img/hotel-slider-3-mid.jpg">
+                <img src="img/hotel-slider-3.jpg" alt="House" loading="lazy">
+              </picture>
+            </div>
+            <div class="hotel__slide swiper-slide">
+              <picture>
+                <source media="(max-width: 480px)" srcset="img/hotel-slider-4-small.jpg">
+                <source media="(max-width: 767px)" srcset="img/hotel-slider-4-mid.jpg">
+                <img src="img/hotel-slider-4.jpg" alt="House" loading="lazy">
+              </picture>
+            </div>
           </div>
           <button class="hotel__slider-btn hotel__slider-btn--next"></button>
           <button class="hotel__slider-btn hotel__slider-btn--prev"></button>
@@ -167,7 +196,7 @@
       <ul class="packages__grid">
         <li class="packages__item packages__item--big">
           <div class="packages__photo">
-            <img src="img/packages-1.jpg" alt="Hotel Blue Haven" class="packages__img">
+            <img src="img/packages-1.jpg" alt="Hotel Blue Haven" class="packages__img" loading="lazy">
             <span class="offer packages__offer">Flash Offer</span>
           </div>
 
@@ -200,7 +229,7 @@
         </li>
         <li class="packages__item packages__item--small">
           <div class="packages__photo">
-            <img src="img/packages-2.jpg" alt="Hotel Blue Haven" class="packages__img">
+            <img src="img/packages-2.jpg" alt="Hotel Blue Haven" class="packages__img" loading="lazy">
             <span class="offer packages__offer packages__offer--small">Flash Offer</span>
           </div>
           <div class="packages__descr packages__descr--small">
@@ -220,7 +249,7 @@
         </li>
         <li class="packages__item packages__item--small">
           <div class="packages__photo">
-            <img src="img/packages-3.jpg" alt="Hotel Blue Haven" class="packages__img">
+            <img src="img/packages-3.jpg" alt="Hotel Blue Haven" class="packages__img" loading="lazy">
             <span class="offer packages__offer packages__offer--small">Flash Offer</span>
           </div>
           <div class="packages__descr packages__descr--small">
@@ -240,7 +269,7 @@
         </li>
         <li class="packages__item packages__item--small">
           <div class="packages__photo">
-            <img src="img/packages-4.jpg" alt="Hotel Blue Haven" class="packages__img">
+            <img src="img/packages-4.jpg" alt="Hotel Blue Haven" class="packages__img" loading="lazy">
             <span class="offer packages__offer packages__offer--small">Flash Offer</span>
           </div>
           <div class="packages__descr packages__descr--small">
@@ -260,7 +289,7 @@
         </li>
         <li class="packages__item packages__item--small">
           <div class="packages__photo">
-            <img src="img/packages-5.jpg" alt="Hotel Blue Haven" class="packages__img">
+            <img src="img/packages-5.jpg" alt="Hotel Blue Haven" class="packages__img" loading="lazy">
             <span class="offer packages__offer packages__offer--small">Flash Offer</span>
           </div>
           <div class="packages__descr packages__descr--small">
@@ -289,10 +318,11 @@
         <h2 class="newsletter__title">Newsletter</h2>
       </div>
       <form class="subscribe newsletter__subscribe subscribe__form" data-aos="fade-left">
-        <input class="subscribe__field" name="email" type="text" placeholder="Your email address" data-validate-field="email">
+        <input class="subscribe__field" name="email" type="text" placeholder="Your email address"
+          data-validate-field="email">
         <button class="subscribe__button btn" name="button" value="subscribe-form">Send</button>
         <input type="hidden" name="admin_email[]" value="wywkoff@gmail.com">
-          <input type="hidden" name="form_subject" value="Новая подписка Best Tour plan">
+        <input type="hidden" name="form_subject" value="Новая подписка Best Tour plan">
       </form>
     </div>
   </section>
@@ -306,7 +336,8 @@
             <div class="reviews__item">
               <div class="reviews__profile">
                 <div class="swiper-lazy-preloader"></div>
-                <img class="reviews__avatar swiper-lazy" src="#" data-src="img/reviews-avatar-1.jpg" alt="avatar: Megan Fox">
+                <img class="reviews__avatar swiper-lazy" src="#" data-src="img/reviews-avatar-1.jpg"
+                  alt="avatar: Megan Fox">
                 <h3 class="reviews__username">Megan Fox</h3>
                 <time class="reviews__date" datetime="2019-11-18">Stayed 18 Nov, 2019</time>
                 <div class="reviews__stars">
@@ -329,7 +360,8 @@
             <div class="reviews__item">
               <div class="reviews__profile">
                 <div class="swiper-lazy-preloader"></div>
-                <img class="reviews__avatar swiper-lazy" src="#" data-src="img/reviews-avatar-2.jpg" alt="avatar: Jeffri Larsen">
+                <img class="reviews__avatar swiper-lazy" src="#" data-src="img/reviews-avatar-2.jpg"
+                  alt="avatar: Jeffri Larsen">
                 <h3 class="reviews__username">Jeffri Larsen</h3>
                 <time class="reviews__date" datetime="2020-11-06">Stayed 18 Jun, 2020</time>
                 <div class="reviews__stars">
@@ -350,7 +382,8 @@
             <div class="reviews__item">
               <div class="reviews__profile">
                 <div class="swiper-lazy-preloader"></div>
-                <img class="reviews__avatar swiper-lazy" src="#" data-src="img/reviews-avatar-3.jpg" alt="avatar: Monica Gastambite">
+                <img class="reviews__avatar swiper-lazy" src="#" data-src="img/reviews-avatar-3.jpg"
+                  alt="avatar: Monica Gastambite">
                 <h3 class="reviews__username">Monica Gastambite</h3>
                 <time class="reviews__date" datetime="2018-12-05">Stayed 05 Dec, 2018</time>
                 <div class="reviews__stars">
@@ -381,26 +414,26 @@
       <ul class="card activities__card">
         <li class="card__item" data-aos="fade-up" data-aos-delay="200">
           <img class="card__img" src="img/card-1.jpg" alt="The curious corner
-          of chamarel">
+          of chamarel" loading="lazy">
           <h3 class="card__title">The curious corner of&nbsp;chamarel</h3>
           <button class="card__btn btn" data-toggle="modal">Book Now</button>
         </li>
         <li class="card__item" data-aos="fade-up" data-aos-delay="300">
           <img class="card__img" src="img/card-2.jpg" alt="Gymkhana club golf
-          course">
+          course" loading="lazy">
           <h3 class="card__title">Gymkhana club golf course</h3>
           <button class="card__btn btn" data-toggle="modal">Book Now</button>
         </li>
         <li class="card__item" data-aos="fade-up" data-aos-delay="400">
           <img class="card__img" src="img/card-3.jpg" alt="Tamarind falls hiking
-          trip - full day">
+          trip - full day" loading="lazy">
           <h3 class="card__title">Tamarind falls hiking trip&nbsp;- full day
           </h3>
           <button class="card__btn btn" data-toggle="modal">Book Now</button>
         </li>
         <li class="card__item" data-aos="fade-up" data-aos-delay="500">
           <img class="card__img" src="img/card-4.jpg" alt="The blue marine discovery
-          quest">
+          quest" loading="lazy">
           <h3 class="card__title">The blue marine discovery quest</h3>
           <button class="card__btn btn" data-toggle="modal">Book Now</button>
         </li>
@@ -539,10 +572,12 @@
       <h3 class="modal__title">Booking</h3>
       <form class="form modal__form">
         <div class="modal__input-group">
-          <input class="input modal__input name" type="text" name="name" placeholder="Your Full Name*" data-validate-field="name">
+          <input class="input modal__input name" type="text" name="name" placeholder="Your Full Name*"
+            data-validate-field="name">
         </div>
         <div class="modal__input-group">
-          <input class="input modal__input" type="tel" name="phone" placeholder="Phone Number*" data-validate-field="tel">
+          <input class="input modal__input" type="tel" name="phone" placeholder="Phone Number*"
+            data-validate-field="tel">
         </div>
         <div class="modal__input-group">
           <input class="input modal__input" type="email" name="email" placeholder="Email*" data-validate-field="email">
@@ -553,7 +588,7 @@
           <span class="modal__form-text">* Required Fields</span>
         </div>
         <input type="hidden" name="admin_email[]" value="wywkoff@gmail.com">
-          <input type="hidden" name="form_subject" value="Заявка с сайта Best Tour plan">
+        <input type="hidden" name="form_subject" value="Заявка с сайта Best Tour plan">
       </form>
       <button class="modal__close" aria-label="Close modal window">
         <svg class="modal__close-btn">
