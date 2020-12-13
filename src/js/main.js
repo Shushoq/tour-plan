@@ -1,8 +1,8 @@
 import Swiper from 'swiper'
 import Inputmask from 'inputmask'
-// import JustValidate from "../../node_modules/just-validate/dist/js/just-validate"
+import JustValidate from "../../node_modules/just-validate/dist/js/just-validate"
 import AOS from 'aos'
-import './just-validate'
+// import './just-validate'
 
 document.addEventListener('DOMContentLoaded', function () {
 
@@ -42,7 +42,6 @@ document.addEventListener('DOMContentLoaded', function () {
       nextEl: ".reviews__slider-btn--next",
       prevEl: ".reviews__slider-btn--prev",
     },
-    autoHeight: true,
     preloadImages: false,
     lazy: true,
   });
@@ -75,33 +74,38 @@ document.addEventListener('DOMContentLoaded', function () {
             body: formData
           })
           .then(function (data) {
-            if (selector === ".subscribe__form") {
-              window.location.replace("subscribe.html")
-            } else {
-              window.location.replace("thanks.html")
-            }
             form.reset();
+            if (selector === ".subscribe__form") {
+              document.location.assign("subscribe.html")
+            } else {
+              document.location.assign("thanks.html")
+            }
           });
       }
     });
   }
 
-  validateForms('.modal__form', {
-    email: {
-      required: true,
-      email: true
-    },
-    name: {
-      required: true,
-      minLength: 2,
-    },
-    tel: {
-      required: true,
-      strength: {
-        custom: '[^_]$'
+  let modalForm = document.querySelector('.modal__form');
+  let subscribeForm = document.querySelector('.subscribe__form');
+
+  if (modalForm) {
+    validateForms('.modal__form', {
+      email: {
+        required: true,
+        email: true
       },
-    },
-  });
+      name: {
+        required: true,
+        minLength: 2,
+      },
+      tel: {
+        required: true,
+        strength: {
+          custom: '[^_]$'
+        },
+      },
+    });
+  }
 
   validateForms('.footer__form', {
     name: {
@@ -116,12 +120,16 @@ document.addEventListener('DOMContentLoaded', function () {
     },
   });
 
-  validateForms('.subscribe__form', {
-    email: {
-      required: true,
-      email: true
-    }
-  });
+  if (subscribeForm) {
+    validateForms('.subscribe__form', {
+      email: {
+        required: true,
+        email: true
+      }
+    });
+  }
+
+
 
   const maps = document.querySelector('.hotel__map')
   maps.addEventListener('mouseover', (event) => {
